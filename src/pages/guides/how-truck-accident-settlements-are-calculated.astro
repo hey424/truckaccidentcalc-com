@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'How Truck Accident Settlements Are Calculated | truckaccidentcalc.com';
+const description = 'A walkthrough of the special damages + multiplier framework for valuing truck accident claims, with a worked example, common mistakes, and what plaintiffs underestimate.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>How Truck Accident Settlements Are Calculated</h1>
+  <p class="byline">By Rowan Bellamy, Editor-in-Chief &mdash; Commercial Trucking Claims. Reviewed May 2026.</p>
+
+  <p>The right way to read a settlement offer is to know how the other side built their number. Plaintiff attorneys and defense adjusters use the same skeleton math; the disagreement is in the assumptions. This guide walks through the framework so you can sanity-check what the carrier's adjuster sends you and so you can construct your own counter-demand.</p>
+
+  <h2>The skeleton: specials plus multiplier</h2>
+  <p>The standard early-valuation formula is:</p>
+  <p><code>Case value = Special damages + (Medical specials &times; multiplier)</code></p>
+  <p>Specials are the economic losses you can put on a spreadsheet. Multiplier estimates the non-economic component. The whole thing produces a starting number that gets adjusted up or down for liability strength, venue, comparative fault, policy limits, and the dozens of fact-specific variables that move real settlement value.</p>
+
+  <h2>Worked example</h2>
+  <p>Driver T-bones a passenger car at an intersection. Logbook shows the driver had been over the 11-hour rule for two hours. Plaintiff is a 40-year-old electrician. Injuries: herniated disc requiring surgery, eight weeks out of work, expected to return to full work after a six-month recovery with some residual limitation on heavy overhead work.</p>
+
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>ER visit + initial imaging</td><td>$8,000</td></tr>
+      <tr><td>Surgical fees, hospital, anesthesia</td><td>$62,000</td></tr>
+      <tr><td>Physical therapy (12 weeks)</td><td>$6,500</td></tr>
+      <tr><td>Future medical (estimated)</td><td>$8,000</td></tr>
+      <tr><td>Lost wages (8 weeks &times; $1,900/wk)</td><td>$15,200</td></tr>
+      <tr><td>Reduced earning capacity (limited overhead work, projected)</td><td>$22,000</td></tr>
+      <tr><td>Vehicle (totaled, ACV)</td><td>$14,000</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Special damages total: $135,700</strong></p>
+  <p><strong>Medical specials: $84,500</strong></p>
+
+  <p>Severity is moderate-to-severe: surgery plus residual impairment. Use a multiplier of 3.5.</p>
+  <p><strong>Pain and suffering:</strong> $84,500 &times; 3.5 = $295,750</p>
+  <p><strong>Headline estimate:</strong> $135,700 + $295,750 = <strong>$431,450</strong></p>
+  <p>Apply &plusmn;25%: <strong>range $323,588 &ndash; $539,313.</strong></p>
+
+  <p>That's the starting number. Now adjust:</p>
+  <ul>
+    <li><strong>Hours-of-service violation.</strong> Adjuster knows this is a winnable case on liability and a sympathetic-plaintiff case if it goes to a jury. Pushes upward.</li>
+    <li><strong>Policy limits.</strong> Carrier's primary is $1M with a $5M excess layer. Plenty of coverage. No artificial cap.</li>
+    <li><strong>Venue.</strong> Crash happened in a moderately plaintiff-friendly county.</li>
+    <li><strong>Comparative fault.</strong> No plaintiff fault claimed.</li>
+  </ul>
+  <p>Realistic settlement range here is closer to <strong>$450,000&ndash;$650,000</strong>. Pre-suit settlement would land in the $450K&ndash;$525K range; if the case files and survives motion practice, it could push toward the $650K upper bound.</p>
+
+  <h2>What plaintiffs underestimate</h2>
+  <h3>Future medical costs</h3>
+  <p>Most people think about what they've already spent on medical care. Almost none think systematically about what's coming. Future PT, follow-up imaging, possible second surgeries, lifetime accommodation costs for permanent impairment &mdash; those numbers compound. For any injury with lasting effects, a treating physician's projection of future medical needs is the single highest-leverage piece of evidence in the case.</p>
+
+  <h3>Reduced earning capacity</h3>
+  <p>This is distinct from "lost wages." Lost wages are the hours you missed. Reduced earning capacity is the difference between what you could have earned over your remaining work life had the crash not happened, and what you can realistically earn now. For trade workers, hands-on professionals, and physical-labor occupations, this number is often enormous and routinely ignored by inexperienced claimants.</p>
+
+  <h3>Multiplier selection</h3>
+  <p>Plaintiffs often understate severity. A surgery is at least a 3.5; permanent impairment is at least a 4; permanent disability is 5+. If your case has any of these features, applying a 2.5 leaves money on the table.</p>
+
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><strong>Settling before MMI.</strong> Maximum medical improvement is the point where your condition is stable. Before MMI, you don't know what your future medical costs are. Settling early locks you in at a number that almost always proves to be too low.</li>
+    <li><strong>Accepting the property damage release as a "total release."</strong> Adjusters sometimes mix vehicle-damage releases with broader liability language. Read every word. A clean property-damage release should release only property damage claims.</li>
+    <li><strong>Forgetting about subrogation.</strong> Your health insurer, Medicare, Medicaid, and any workers' comp carrier that paid for treatment have liens or subrogation rights against your settlement. The number you net is less than the number you settle for. Plan for it.</li>
+    <li><strong>Underestimating the carrier defendant.</strong> The truck driver might have a personal policy. The trucking company has a commercial policy. The carrier might have an excess policy. The broker might have contingent coverage. A small "underinsured driver" case can become a substantial recovery when you trace the full defendant chain.</li>
+  </ul>
+
+  <h2>Where to go next</h2>
+  <p>For the regulatory side, see our <a href="/guides/fmcsa-trucking-regulations-explained">FMCSA guide</a>. For how comparative fault changes the math, see <a href="/guides/comparative-fault-truck-accidents">our state-by-state breakdown</a>. For the negotiation itself, see <a href="/guides/dealing-with-trucking-insurance">dealing with trucking insurance companies</a>.</p>
+</BaseLayout>

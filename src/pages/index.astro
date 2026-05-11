@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Truck Accident Settlement Calculator — Estimate Your Claim Value | truckaccidentcalc.com';
+const description = 'Estimate the value of a commercial truck accident claim. Adds medical bills, lost wages, future earnings, vehicle damage, and a pain-and-suffering multiplier to produce a settlement range. Educational only.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Truck Accident Settlement Calculator</h1>
+  <p>Commercial truck collisions produce a different damage profile than ordinary car wrecks. Injuries are typically more severe, repairs cost more, federal carrier rules come into play, and the insurance limits on the truck side are often ten to twenty times higher. This calculator gives you an educational range for what a truck accident claim could be worth using the standard <strong>special damages + multiplier</strong> approach insurers and plaintiff attorneys both apply in early case valuation.</p>
+
+  <section aria-labelledby="calc-heading">
+    <h2 id="calc-heading">Estimate your settlement range</h2>
+    <noscript>
+      <p><strong>Note:</strong> the interactive calculator requires JavaScript. With JavaScript disabled, you can still apply the manual formula in the <a href="/methodology">methodology</a> page.</p>
+    </noscript>
+    <div id="calculator-island">
+      <form class="calc-form" data-pilot-placeholder>
+        <label>
+          Medical bills to date ($)
+          <input type="number" min="0" step="100" placeholder="45000" />
+        </label>
+        <label>
+          Estimated future medical costs ($)
+          <input type="number" min="0" step="100" placeholder="20000" />
+        </label>
+        <label>
+          Lost wages to date ($)
+          <input type="number" min="0" step="100" placeholder="12000" />
+        </label>
+        <label>
+          Future lost earnings / reduced earning capacity ($)
+          <input type="number" min="0" step="100" placeholder="0" />
+        </label>
+        <label>
+          Vehicle and property damage ($)
+          <input type="number" min="0" step="100" placeholder="8000" />
+        </label>
+        <label>
+          Injury severity (sets the pain-and-suffering multiplier)
+          <select>
+            <option value="1.5">Minor &mdash; soft tissue, full recovery in weeks</option>
+            <option value="2.5" selected>Moderate &mdash; treatment for months, residual effects</option>
+            <option value="4">Severe &mdash; surgery, lasting impairment, long recovery</option>
+            <option value="5">Catastrophic &mdash; permanent disability, TBI, paralysis</option>
+          </select>
+        </label>
+        <button type="button">Calculate (interactive version loads with JS)</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why truck cases are valued differently</h2>
+    <p>Three structural differences push truck cases higher than ordinary auto cases:</p>
+    <ol>
+      <li><strong>Severity of injuries.</strong> An 80,000-lb commercial vehicle striking a passenger car at highway speed produces injuries you rarely see in car-on-car wrecks. Median treatment costs are higher; permanent impairment rates are higher.</li>
+      <li><strong>Higher policy limits.</strong> Federal Motor Carrier Safety Administration (FMCSA) rules require most interstate motor carriers to carry at least $750,000 in liability coverage; hazmat haulers must carry $1 million or $5 million depending on cargo. Many carriers buy excess policies stacking to $5&ndash;$10 million. The "ceiling" in car cases is usually $50,000&ndash;$250,000 per person; in truck cases it's often an order of magnitude higher.</li>
+      <li><strong>More defendants and more discoverable evidence.</strong> The driver, the trucking company, the broker, the shipper, the cargo loader, and the truck manufacturer can each be a separate defendant. Each has its own insurer. Discoverable evidence (electronic logging device data, dashcam footage, driver qualification files, maintenance records, drug-test records) is much richer than in car cases.</li>
+    </ol>
+    <p>For more on how each of these inputs flows into a number, see our <a href="/methodology">methodology</a> page and the <a href="/guides/how-truck-accident-settlements-are-calculated">deeper guide</a>.</p>
+  </section>
+
+  <section>
+    <h2>What this calculator does not do</h2>
+    <p>A real case valuation reflects the venue (some jurisdictions are far more plaintiff-friendly than others), the comparative fault rule applied in your state, the strength of the liability evidence, defense counsel's settlement posture, and dozens of fact-specific details a calculator cannot model. This estimator is calibrated to give a reasonable opening range so you can spot when a settlement offer is in the ballpark and when it isn't. It is not a substitute for an attorney's case valuation.</p>
+  </section>
+
+  <section>
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/guides/how-truck-accident-settlements-are-calculated">How truck accident settlements are calculated</a></li>
+      <li><a href="/guides/fmcsa-trucking-regulations-explained">FMCSA trucking regulations explained</a></li>
+      <li><a href="/guides/comparative-fault-truck-accidents">Comparative fault and truck accidents</a></li>
+      <li><a href="/guides/dealing-with-trucking-insurance">Dealing with trucking insurance companies</a></li>
+    </ul>
+  </section>
+
+  <style>
+    .calc-form {
+      display: grid;
+      gap: 0.75rem;
+      max-width: 500px;
+      margin: 1rem 0;
+    }
+    .calc-form label {
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.95rem;
+    }
+    .calc-form input,
+    .calc-form select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+    }
+    .calc-form button {
+      padding: 0.6rem 1rem;
+      background: var(--color-accent);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</BaseLayout>

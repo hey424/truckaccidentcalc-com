@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'FMCSA Trucking Regulations Explained | truckaccidentcalc.com';
+const description = 'A working guide to the FMCSA rules that matter in truck accident litigation: hours of service, driver qualifications, insurance minimums, ELD requirements, and how violations affect civil liability.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>FMCSA Trucking Regulations Explained</h1>
+  <p class="byline">By Cypress Whitlow, Contributing Writer &mdash; DOT &amp; FMCSA Compliance. Reviewed May 2026.</p>
+
+  <p>The Federal Motor Carrier Safety Administration (FMCSA) regulates commercial motor carriers operating in interstate commerce. Its rules &mdash; codified in 49 CFR Parts 350&ndash;399 &mdash; cover everything from how long a driver can stay behind the wheel to how much liability coverage the carrier must buy. For an injured plaintiff, FMCSA violations frequently turn an ordinary crash case into a substantial one. This guide covers the rules that matter most.</p>
+
+  <h2>Hours of service</h2>
+  <p>The hours-of-service (HOS) rules limit how long a commercial driver can drive without rest. For property-carrying drivers (the most common case), the core limits are:</p>
+  <ul>
+    <li><strong>11-hour driving limit.</strong> No more than 11 hours of driving after 10 consecutive hours off duty.</li>
+    <li><strong>14-hour work limit.</strong> The 11 driving hours must fall within a 14-hour on-duty window. After hour 14, the driver cannot drive again until 10 consecutive hours off.</li>
+    <li><strong>30-minute break.</strong> A 30-minute break is required after 8 cumulative hours of driving.</li>
+    <li><strong>60/70-hour weekly limit.</strong> 60 hours on-duty in 7 days (for carriers operating less than 7 days a week) or 70 hours in 8 days. A 34-hour off-duty period resets the cumulative total.</li>
+  </ul>
+  <p>A driver who crashes while over hours is in serious trouble &mdash; both with FMCSA enforcement and in any civil suit. The carrier's records, including the electronic logging device download, will show whether HOS was exceeded. If the carrier knowingly dispatched the driver past hours, that's negligent dispatch and a potential punitive-damages claim in most jurisdictions.</p>
+
+  <h2>Driver qualifications</h2>
+  <p>49 CFR Part 391 requires carriers to maintain a "Driver Qualification File" (DQF) on every CDL driver. The DQF contains:</p>
+  <ul>
+    <li>The driver's application for employment;</li>
+    <li>Three years of motor vehicle record (MVR) checks;</li>
+    <li>Investigation of the driver's safety performance with previous employers (last 3 years);</li>
+    <li>A current medical examiner's certificate;</li>
+    <li>Road test certificate or equivalent CDL;</li>
+    <li>Annual driving record reviews.</li>
+  </ul>
+  <p>Missing or falsified DQF documents are a discoverable problem in civil litigation. A carrier that hired a driver with a history of moving violations, prior DUIs, or HOS violations on their MVR is exposed to "negligent hiring" claims separate from the underlying crash claim.</p>
+
+  <h2>Medical certification</h2>
+  <p>CDL drivers must hold a current medical examiner's certificate (the "Medical Card"). The exam screens for vision and hearing minimums, blood pressure, diabetes, sleep apnea, and other conditions affecting safe operation. Drivers with disqualifying conditions can sometimes drive under a federal exemption.</p>
+  <p>If a driver was operating with an expired medical card, an undisclosed disqualifying condition, or an exemption obtained through misrepresentation, that's another carrier-liability theory available to a plaintiff.</p>
+
+  <h2>Drug and alcohol testing</h2>
+  <p>49 CFR Part 382 requires drug and alcohol testing for CDL drivers in five contexts: pre-employment, post-accident, random, reasonable suspicion, and return-to-duty. Post-accident testing must occur within 8 hours (alcohol) or 32 hours (controlled substances) after an accident meeting the regulatory threshold (fatality, injury requiring medical transport, or disabling vehicle damage).</p>
+  <p>A positive post-accident test or a refusal to test is admissible against the driver and the carrier in civil litigation. A failure by the carrier to administer a required post-accident test is itself a violation and is admissible as evidence of carrier-side negligence.</p>
+
+  <h2>Insurance minimums</h2>
+  <p>49 CFR Part 387 sets minimum financial responsibility levels:</p>
+  <table>
+    <thead>
+      <tr><th>Operation type</th><th>Minimum coverage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Non-hazardous freight in vehicles over 10,000 lbs (interstate)</td><td>$750,000</td></tr>
+      <tr><td>Oil transport, hazardous waste, certain hazmat</td><td>$1,000,000</td></tr>
+      <tr><td>Certain hazardous materials (Class A&ndash;C explosives, poison gas, large hazmat)</td><td>$5,000,000</td></tr>
+      <tr><td>Passenger carriers, 16+ passengers</td><td>$5,000,000</td></tr>
+      <tr><td>Passenger carriers, 15 or fewer passengers</td><td>$1,500,000</td></tr>
+    </tbody>
+  </table>
+  <p>These are federal floors. Many carriers carry excess policies on top of the federal minimum, and large fleets often stack to $5M or $10M total. The FMCSA's <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx" rel="noopener">SAFER company snapshot</a> tool lets you look up a carrier's USDOT number and see the filed coverage.</p>
+
+  <h2>Electronic logging devices (ELDs)</h2>
+  <p>Most CDL drivers must use an ELD to record driving time. The ELD captures driving status, vehicle motion, location, and HOS compliance. ELD data is preserved for six months under federal rules, but in practice it should be preserved much longer once litigation is reasonably anticipated.</p>
+  <p>A spoliation letter from plaintiff's counsel after the crash puts the carrier on notice to preserve the ELD download, dispatch records, payroll, communications with the driver, and any video. Carriers that destroy or "lose" this data after notice face spoliation sanctions in subsequent litigation &mdash; in some jurisdictions including an adverse inference jury instruction.</p>
+
+  <h2>Cargo securement and vehicle maintenance</h2>
+  <p>49 CFR Part 393 covers vehicle equipment and Part 396 covers vehicle inspection and maintenance. Carriers must perform pre-trip and post-trip inspections, maintain records, and keep equipment in working order. Cargo must be properly secured per the cargo securement standards. Failures here become independent negligence theories when a tire failure, brake failure, or cargo-shift contributed to the crash.</p>
+
+  <h2>How FMCSA violations affect liability</h2>
+  <p>In civil litigation, an FMCSA violation operates as evidence of negligence under most states' tort law. In some jurisdictions, certain violations are treated as "negligence per se" &mdash; the violation alone establishes the duty-breach element of the negligence claim, leaving only causation and damages to argue. Even where they are not negligence per se, violations are admissible to show the carrier's safety practices, the driver's compliance posture, and (when combined with knowledge by the carrier) a basis for punitive damages.</p>
+
+  <p>For the math of how those increases flow into a settlement number, see <a href="/guides/how-truck-accident-settlements-are-calculated">how truck accident settlements are calculated</a>. For the role of plaintiff fault in reducing recovery, see <a href="/guides/comparative-fault-truck-accidents">comparative fault</a>.</p>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Methodology — How the Truck Accident Calculator Works | truckaccidentcalc.com';
+const description = 'The formulas behind our truck accident settlement estimator: special damages, the pain-and-suffering multiplier method, severity tiers, and the low/mid/high range we report.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Methodology</h1>
+  <p class="byline">Reviewed by Rowan Bellamy, RB &mdash; Editor-in-Chief, Commercial Trucking Claims. Last updated May 2026.</p>
+
+  <p>The calculator on our homepage uses the <strong>special damages + multiplier</strong> framework that personal injury practitioners and insurance adjusters apply during early case valuation. This is not a proprietary formula; it's the standard reference approach used in PI casebooks, paralegal training materials, and the educational sections of the major insurance treatises. We explain it here so you can verify the math, plug in your own numbers manually, or argue with our assumptions.</p>
+
+  <h2>Step 1: Sum the special damages</h2>
+  <p>"Special damages" (or "specials") are the economic losses you can document with paperwork. They are the additive base of the calculation:</p>
+  <p><code>Specials = Medical (past + future) + Lost wages (past + future) + Property damage</code></p>
+  <p>Each input maps to a specific source document:</p>
+  <ul>
+    <li><strong>Medical &mdash; past.</strong> Itemized bills from ER, hospital, treating physicians, physical therapy, prescriptions. Use billed amounts; the negotiated/insurer-paid amount is a separate question discussed in our <a href="/guides/dealing-with-trucking-insurance">insurance guide</a>.</li>
+    <li><strong>Medical &mdash; future.</strong> Treatment that's projected but not yet incurred: continued PT, future surgeries, durable medical equipment, anticipated medication. Usually requires a treating physician's opinion or a life-care plan.</li>
+    <li><strong>Lost wages &mdash; past.</strong> Hours missed since the crash, valued at your normal rate. Bring pay stubs and an employer letter.</li>
+    <li><strong>Lost wages &mdash; future.</strong> Reduced earning capacity if your injury permanently affects what you can do. This requires expert testimony in litigation; for an early estimate use a reasonable projection based on time-to-return-to-work and any expected long-term capacity reduction.</li>
+    <li><strong>Property damage.</strong> Repair invoice or total-loss valuation for the vehicle, plus any personal property destroyed in the crash.</li>
+  </ul>
+
+  <h2>Step 2: Apply the pain-and-suffering multiplier</h2>
+  <p>"General damages" cover non-economic harm &mdash; pain, suffering, loss of enjoyment, emotional distress. The multiplier method estimates them as some multiple of the medical specials. The multiplier is scaled to injury severity. Our calculator uses four tiers:</p>
+  <table>
+    <thead>
+      <tr><th>Severity tier</th><th>Multiplier</th><th>Typical pattern</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Minor</td><td>1.5&times;</td><td>Soft tissue injuries; full recovery within weeks; no permanent effects.</td></tr>
+      <tr><td>Moderate</td><td>2.5&times;</td><td>Months of treatment; some residual stiffness, pain, or scarring; eventual return to baseline.</td></tr>
+      <tr><td>Severe</td><td>4&times;</td><td>Surgery; extended recovery; lasting impairment that does not fully resolve.</td></tr>
+      <tr><td>Catastrophic</td><td>5&times; or higher</td><td>Permanent disability; traumatic brain injury; spinal cord injury; loss of limb.</td></tr>
+    </tbody>
+  </table>
+  <p>Multipliers above 5 are reserved in our calculator for cases with permanent disability. In litigation, multipliers of 7 or 10 occasionally appear &mdash; usually when a sympathetic plaintiff, an egregious defendant (drunk driver, repeated FMCSA violations, dispatched while over hours-of-service limits), and a plaintiff-friendly venue line up. Our estimator does not attempt to model those situations.</p>
+
+  <p>The pain-and-suffering component is calculated against medical specials only, not against all specials:</p>
+  <p><code>Pain and suffering = (Medical past + Medical future) &times; multiplier</code></p>
+
+  <h2>Step 3: Build the total</h2>
+  <p><code>Estimated value = Specials + Pain and suffering</code></p>
+  <p>We then report this as a low-to-high range by applying &plusmn;25% to capture the routine variability we see in real case outcomes for cases with similar input profiles. The midpoint is the headline estimate.</p>
+
+  <h2>What this method does not capture</h2>
+  <ul>
+    <li><strong>Punitive damages.</strong> Some states allow punitive damages where a defendant's conduct was reckless or egregious (driving while intoxicated, knowingly violating FMCSA rules, falsifying logbooks). These can be substantial. We don't model them.</li>
+    <li><strong>Liability disputes.</strong> If fault is genuinely contested, the case value drops &mdash; even a strong case settles at a discount if the defendant has a credible defense. Our calculator assumes liability is reasonably clear.</li>
+    <li><strong>Comparative fault reductions.</strong> Most states reduce damages by the plaintiff's share of fault. A 20%-at-fault plaintiff in a pure comparative state recovers 80% of damages. See our <a href="/guides/comparative-fault-truck-accidents">comparative fault guide</a>.</li>
+    <li><strong>Policy limits.</strong> The case value is capped by what's collectible. If the truck driver has $750,000 in coverage and your damages model says $2 million, you recover $750,000 unless you can reach the trucking company, broker, or excess insurer for the balance.</li>
+    <li><strong>Loss of consortium</strong> and <strong>wrongful death</strong> damages, which require their own analytical framework.</li>
+  </ul>
+
+  <h2>Sources we relied on</h2>
+  <p>The multiplier method is described in the <a href="https://www.iii.org/publications/insurance-handbook" rel="noopener">Insurance Information Institute's Insurance Handbook</a>, the standard PI texts (Werner's <em>Trial Handbook for Personal Injury Lawyers</em>, the West <em>Pattern Jury Instructions</em> for major jurisdictions), and adjuster training materials from the Insurance Institute of America. Severity tier ranges reflect the conventions used in <a href="https://www.fmcsa.dot.gov/safety/data-and-statistics/large-truck-and-bus-crash-facts" rel="noopener">FMCSA crash statistics</a> and in academic personal injury verdict reporters.</p>
+
+  <p>For a deeper walkthrough of the math with a worked example, see <a href="/guides/how-truck-accident-settlements-are-calculated">How truck accident settlements are calculated</a>.</p>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'FAQ — Truck Accident Settlements | truckaccidentcalc.com';
+const description = 'Common questions about truck accident settlements: average values, who pays, how long it takes, when to settle, when to litigate, and what affects the number.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Frequently Asked Questions</h1>
+  <p class="byline">Reviewed by Rowan Bellamy, Editor-in-Chief. Last updated May 2026.</p>
+
+  <h2>What's the average settlement for a truck accident?</h2>
+  <p>There is no useful "average" because the spread is so wide. The published verdict and settlement reporters show truck accident cases settling anywhere from a few thousand dollars (minor property damage, no injury) to multi-million-dollar verdicts (catastrophic injury, clear carrier negligence). Median injury cases tend to fall in the $40,000&ndash;$200,000 range; catastrophic cases routinely settle for $1M+ when policy limits allow. Our calculator gives you a range for <em>your</em> case rather than an average across the universe.</p>
+
+  <h2>How long does a truck accident case take to resolve?</h2>
+  <p>Settlement of an injury-only case where liability is undisputed and treatment is complete: typically 6&ndash;18 months from crash to resolution. Cases requiring litigation (filed complaint, discovery, depositions, mediation, possibly trial): typically 18&ndash;36 months. Catastrophic cases with disputed liability, multiple defendants, and federal court involvement: 2&ndash;5 years is not unusual.</p>
+
+  <h2>Who pays the settlement?</h2>
+  <p>In a truck case, possibilities include the driver's personal auto policy (if any), the trucking company's commercial liability policy, the carrier's excess insurer, the broker's contingent liability policy, the shipper's policy (in rare cases), and the trucking company itself if uninsured or underinsured. FMCSA's minimum-coverage rules ensure that a federally-regulated interstate carrier carries at least $750,000 in liability coverage, but most carriers carry more.</p>
+
+  <h2>The insurance adjuster offered me money two weeks after the crash. Should I take it?</h2>
+  <p>Almost certainly not. Early offers are calibrated to close cases before the injured person knows what their medical situation actually looks like. You don't know what your future medical costs are. You don't know whether you'll fully recover or whether you'll have lasting impairment. Once you sign a release, the case is closed; if your back surgery costs $80,000 six months later, you cannot reopen the claim.</p>
+  <p>Wait until you have reached maximum medical improvement (MMI) or until your treating physician can credibly project your future medical needs. Settle from a position of information.</p>
+
+  <h2>Do I need a lawyer?</h2>
+  <p>For property damage only or very minor injuries, often not. For any injury that involved hospitalization, surgery, missed work, or expected long-term medical care, yes &mdash; the math on attorney fees almost always favors representation. Plaintiff's PI attorneys typically take 33% of a pre-suit settlement or 40% if a complaint is filed; in exchange they handle the negotiation, the medical-records gathering, the lien resolution, and the deposition prep. The well-documented finding from the industry is that represented plaintiffs net more after fees than unrepresented plaintiffs gross, on average, in injury cases.</p>
+
+  <h2>What's "comparative fault" and how does it affect my recovery?</h2>
+  <p>If you were partially at fault, most states reduce your damages by your fault percentage. In a "pure comparative fault" state (about 13 states), a plaintiff who is 90% at fault still recovers 10% of damages. In a "modified comparative fault" state, recovery is barred at either 50% or 51% fault depending on the state. In the four remaining "contributory negligence" states (Alabama, Maryland, North Carolina, Virginia, plus DC), any fault at all bars recovery entirely. See our <a href="/guides/comparative-fault-truck-accidents">guide</a> for state-by-state detail.</p>
+
+  <h2>Why are truck cases worth more than car cases?</h2>
+  <p>Three reasons: injuries are usually more severe (an 80,000-lb truck hits harder than a 4,000-lb car); insurance limits are much higher (federal minimums are $750K vs. typical car limits of $25K&ndash;$100K); and there are more potential defendants (carrier, broker, shipper, manufacturer) each with their own coverage. See our <a href="/methodology">methodology</a> for how this flows into the math.</p>
+
+  <h2>What is the FMCSA and why does it matter?</h2>
+  <p>The Federal Motor Carrier Safety Administration is the federal agency that regulates commercial motor carriers. Its rules cover driver qualifications, hours of service, drug-and-alcohol testing, vehicle maintenance, cargo securement, and insurance minimums. FMCSA violations are admissible in private injury litigation and are often the difference between a routine settlement and a substantial verdict. See our <a href="/guides/fmcsa-trucking-regulations-explained">FMCSA guide</a>.</p>
+
+  <h2>What's a "black box" and why do attorneys mention it?</h2>
+  <p>Commercial trucks carry electronic logging devices (ELDs) that record driving time, speed, brake events, and engine data. Many also have event data recorders (EDRs) that capture the seconds before a collision, and increasingly, dashcam systems with forward and inward-facing cameras. These records are time-limited &mdash; some systems overwrite after 30 days. Your attorney sends a spoliation letter immediately on retention to preserve the data. If a carrier deliberately destroys ELD data after notice, that's evidence the jury will hear about.</p>
+
+  <h2>Can I sue the company that hired the trucking company?</h2>
+  <p>Sometimes. "Negligent hiring" or "negligent entrustment" claims can reach the shipper or broker if they hired a carrier with known safety problems, an expired DOT authority, or a history of similar incidents. These claims are fact-intensive. They are not available in every case but they can add a deep-pocket defendant when a small carrier has thin coverage.</p>
+
+  <h2>Does this site provide legal advice?</h2>
+  <p>No. We provide general educational content about how truck accident cases are valued and what factors affect outcomes. Specific legal questions about your case need to be answered by a personal injury attorney licensed in your state.</p>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Comparative Fault and Truck Accidents | truckaccidentcalc.com';
+const description = 'How comparative fault rules reduce plaintiff recovery in truck accident cases — pure comparative states, modified comparative states with 50/51% bars, and the four contributory negligence holdouts.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Comparative Fault and Truck Accidents</h1>
+  <p class="byline">By Rowan Bellamy, Editor-in-Chief. Reviewed May 2026.</p>
+
+  <p>Comparative fault rules determine what happens when both sides bear some responsibility for a crash. In truck accident cases, defense counsel almost always alleges some plaintiff fault &mdash; "you were speeding," "you changed lanes without signaling," "you should have seen the truck" &mdash; because reducing the plaintiff's recovery by 20% or 30% is worth seven figures in a big case. Understanding the rule in your state is essential to evaluating any settlement offer.</p>
+
+  <h2>The three systems</h2>
+  <p>States fall into one of three buckets:</p>
+
+  <h3>1. Pure comparative fault (~13 states)</h3>
+  <p>The plaintiff's damages are reduced by the plaintiff's percentage of fault, no matter how high. A 99%-at-fault plaintiff still recovers 1% of damages. States in this group include California, Florida (with recent legislative changes pushing it toward modified), Kentucky, Louisiana, Mississippi, Missouri, New Mexico, New York, Rhode Island, Washington, and a few others.</p>
+  <p><strong>Example.</strong> Damages $1,000,000. Plaintiff 30% at fault. Recovery: $700,000.</p>
+
+  <h3>2. Modified comparative fault (~33 states)</h3>
+  <p>Recovery is reduced by plaintiff fault up to a cliff &mdash; usually at 50% or 51% &mdash; at which point recovery is barred entirely. The 50%-bar states allow recovery only if plaintiff fault is <em>less than</em> 50%. The 51%-bar states allow recovery if plaintiff fault is <em>50% or less</em>.</p>
+  <p><strong>50%-bar examples:</strong> Arkansas, Colorado, Georgia, Idaho, Kansas, Maine, Nebraska, North Dakota, Tennessee, Utah, West Virginia.</p>
+  <p><strong>51%-bar examples:</strong> Connecticut, Delaware, Hawaii, Illinois, Indiana, Iowa, Massachusetts, Michigan, Minnesota, Montana, Nevada, New Hampshire, New Jersey, Ohio, Oregon, Pennsylvania, South Carolina, Texas, Vermont, Wisconsin, Wyoming.</p>
+  <p><strong>Example.</strong> Damages $1,000,000. Plaintiff 49% at fault in a 50%-bar state. Recovery: $510,000. Move to 50% fault: recovery zero.</p>
+
+  <h3>3. Pure contributory negligence (4 states + DC)</h3>
+  <p>Alabama, Maryland, North Carolina, Virginia, and the District of Columbia. <em>Any</em> plaintiff fault, even 1%, bars recovery entirely. This is a brutal rule and is widely criticized but remains the law in these jurisdictions.</p>
+  <p><strong>Example.</strong> Damages $1,000,000. Plaintiff 1% at fault. Recovery: zero.</p>
+  <p>In these jurisdictions, the entire case often turns on the all-or-nothing fault question. Defense will fight harder for any fault attribution than they would in a comparative state.</p>
+
+  <h2>How fault is determined</h2>
+  <p>Fault is decided by the jury (in a tried case) or by the parties' assessment of how a jury would decide (in a settled case). The factors that matter:</p>
+  <ul>
+    <li><strong>Traffic law violations.</strong> Speeding, failure to yield, illegal lane change, distracted driving, intoxication. Each is a "negligence per se" peg in most states.</li>
+    <li><strong>Plaintiff's pre-crash behavior.</strong> Was the plaintiff following too closely? In a lane where they shouldn't have been? Wearing a seatbelt? Some states' seatbelt-nonuse rules cap damages for the unbelted portion.</li>
+    <li><strong>Visibility, weather, road conditions.</strong> Affects what a "reasonable" driver should have done.</li>
+    <li><strong>Reaction time and avoidance.</strong> Could the plaintiff have reasonably avoided the crash given what was happening on the road?</li>
+  </ul>
+  <p>The plaintiff's job is to minimize fault attribution. The defense's job is to maximize it. In a truck case where the defendant has obvious FMCSA violations or HOS issues, defense counsel will lean hard on plaintiff fault as the lever they can actually move.</p>
+
+  <h2>Common defense theories in truck cases</h2>
+  <ul>
+    <li><strong>Last clear chance.</strong> "The plaintiff had the last clear chance to avoid the collision." This is a doctrine that historically allowed plaintiff recovery despite contributory negligence; defense flips it to argue plaintiff comparative fault.</li>
+    <li><strong>Sudden emergency.</strong> "The driver was confronted with a sudden emergency through no fault of their own and acted as a reasonable driver would." Used to deflect HOS or visibility-related arguments.</li>
+    <li><strong>Plaintiff lane positioning.</strong> "Plaintiff was in the truck's blind spot." Worth 10&ndash;30% comparative fault in a typical lane-change case.</li>
+    <li><strong>Pre-existing condition or causation gap.</strong> Not technically "comparative fault" but functions similarly &mdash; "the back surgery wasn't caused by the crash."</li>
+  </ul>
+
+  <h2>What this means for your math</h2>
+  <p>Take the calculator's headline estimate. Apply your expected comparative fault percentage. That's your recovery ceiling. If you're in a contributory negligence state and there's any meaningful plaintiff fault on the table, the case may be unviable &mdash; or may require a fact pattern that takes plaintiff fault completely off the table (like a driver who fell asleep at the wheel and crossed the centerline).</p>
+
+  <p>Your attorney's evaluation of likely fault attribution is the single most important variable in case valuation alongside policy limits. Get it from someone who has tried cases in your venue and knows what local juries actually do.</p>
+
+  <p>Back to the math: <a href="/methodology">methodology</a>. For how to push back on inflated fault assertions, see <a href="/guides/dealing-with-trucking-insurance">dealing with trucking insurance</a>.</p>
+</BaseLayout>
