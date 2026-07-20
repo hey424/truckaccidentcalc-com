@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCapture from '../components/LeadCapture.astro';
 const title = 'Truck Accident Settlement Calculator — Estimate Your Claim Value | truckaccidentcalc.com';
 const description = 'Estimate the value of a commercial truck accident claim. Adds medical bills, lost wages, future earnings, vehicle damage, and a pain-and-suffering multiplier to produce a settlement range. Educational only.';
 ---
@@ -47,6 +48,8 @@ const description = 'Estimate the value of a commercial truck accident claim. Ad
       </form>
     </div>
   </section>
+
+  <LeadCapture caseType="truck_accident" caseTypeLabel="Truck Accident" />
 
   <section>
     <h2>Why truck cases are valued differently</h2>
